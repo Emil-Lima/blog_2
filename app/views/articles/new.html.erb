@@ -1,27 +1,3 @@
 <h1>New Article</h1>
 
-<%= form_with model: @article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title) do |message| %>
-      <div>
-        <%= message %>
-      </div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-    <% @article.errors.full_messages_for(:body) do |message| %>
-      <%= message %>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to "Home Page", root_path %>
+<%= render "form", article: @article %>
