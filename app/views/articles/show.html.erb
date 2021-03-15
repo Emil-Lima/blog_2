@@ -7,5 +7,9 @@
 </ul>
 
 <ul>
-  <%= link_to "Home Page", root_path %>
+  <li><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<ul>
+  <li><%= link_to "Home Page", root_path %></li>
 </ul>
